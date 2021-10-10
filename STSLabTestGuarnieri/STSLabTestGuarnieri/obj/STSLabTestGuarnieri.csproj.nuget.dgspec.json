@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/iacopoguarnieri/Projects/STSLabTestGuarnieri/STSLabTestGuarnieri/STSLabTestGuarnieri.csproj": {}
+  },
+  "projects": {
+    "/Users/iacopoguarnieri/Projects/STSLabTestGuarnieri/STSLabTestGuarnieri/STSLabTestGuarnieri.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/iacopoguarnieri/Projects/STSLabTestGuarnieri/STSLabTestGuarnieri/STSLabTestGuarnieri.csproj",
+        "projectName": "STSLabTestGuarnieri",
+        "projectPath": "/Users/iacopoguarnieri/Projects/STSLabTestGuarnieri/STSLabTestGuarnieri/STSLabTestGuarnieri.csproj",
+        "packagesPath": "/Users/iacopoguarnieri/.nuget/packages/",
+        "outputPath": "/Users/iacopoguarnieri/Projects/STSLabTestGuarnieri/STSLabTestGuarnieri/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/iacopoguarnieri/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.26, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

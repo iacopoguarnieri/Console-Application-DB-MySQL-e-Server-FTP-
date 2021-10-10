@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{BE2EBAEA-0CB5-46D4-BCCA-97CCAB243844}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="STSLabTestGuarnieri/Program.cs">
+    <Files>
+      <File FileName="STSLabTestGuarnieri/Program.cs" Line="344" Column="22" />
+      <File FileName="STSLabTestGuarnieri/jobCopy.txt" Line="143" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="STSLabTestGuarnieri" expanded="True" selected="True">
+            <Node name="STSLabTestGuarnieri" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>StringToAddList</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.STSLabTestGuarnieri PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
