@@ -284,14 +284,32 @@ namespace STSLabTestGuarnieri
             request.Credentials = new NetworkCredential("stslab_test3", "zy'@7FP#");
 
             // Copy the contents of the file to the request stream.
-            byte[] fileContents;
             string localfilePath = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, "STSLabTestGuarnieri/jobCopy.txt");
 
-            using (StreamReader sourceStream = new StreamReader(localfilePath))
+            StreamReader file = new System.IO.StreamReader(localfilePath);
+            string line = "", text = "";
+            int count = 0;
+
+            while ((line = file.ReadLine()) != null)
             {
-                Console.WriteLine(sourceStream.ReadLine());
-                fileContents = System.Text.Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+                string[] temp = line.ToString().Split(",");
+                for (int i = 0; i < 8; i++)
+                {
+                    text += temp[i];
+                    if (i < 7) text += ",";
+                }
+                text += "\n";
+                count++;
             }
+
+            byte[] fileContents = new byte[count];
+            fileContents = System.Text.Encoding.UTF8.GetBytes(text);
+            file.Close();
+
+            /*using (StreamReader sourceStream = new StreamReader(localfilePath))
+            {
+                fileContents = System.Text.Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+            }*/
 
             request.ContentLength = fileContents.Length;
 
@@ -342,7 +360,7 @@ namespace STSLabTestGuarnieri
                         appendTextLocal += "\r\n\"" + StringToAddList[i].codeOfOrder + "\",\"" + StringToAddList[i].nameProduct + "\"," + (float)(Math.Round(rand.NextDouble() * 100f) / 100f) + "," + (float)(Math.Round(rand.NextDouble() * 100f) / 100f) + "," + StringToAddList[i].numberOfPieces + ",\"\",\"\",0," + StringToAddList[i].idRecord + "," + StringToAddList[i].idProduct;
                         appendTextFTP += "\r\n\"" + StringToAddList[i].codeOfOrder + "\",\"" + StringToAddList[i].nameProduct + "\"," + (float)(Math.Round(rand.NextDouble() * 100f) / 100f) + "," + (float)(Math.Round(rand.NextDouble() * 100f) / 100f) + "," + StringToAddList[i].numberOfPieces + ",\"\",\"\",0";
                     }
-                    /*else
+                    else
                     {
                         // Controllo se il codice della commessa o la quantità del prodotto è stata modificata
                         string modifyString = "";
@@ -371,9 +389,9 @@ namespace STSLabTestGuarnieri
 
                             printTextToConsole("Modifica a commessa già inserita rilevata");
                             updateRowOfLocalJobFile(id, modifyString);
-                            //updateFTPJobFileFromLocalJobFile();
+                            updateFTPJobFileFromLocalJobFile();
                         }
-                    }*/
+                    }
                 }
             }
 
@@ -428,7 +446,6 @@ namespace STSLabTestGuarnieri
         {
             // Avviso l'utente tramite il terminale
             printTextToConsole("Controllo se ci sono modifiche fatte alle commesse nel file FTP");
-
 
             try
             {
@@ -538,11 +555,6 @@ namespace STSLabTestGuarnieri
             Program p = new Program();
             int cycleCounter = 1;
             DateTime start, end;
-
-            // TO-DO
-            // 1. ottimizzare il codice
-            // 2. se si modifca/elimina una commessa sul db questa va fatta anche sul file FTP e, quindi, in locale
-            // 3. inviare il progetto tramite mail
 
             Console.WriteLine("Per uscire dal loop cliccare sul terminale e premere ESC");
             do

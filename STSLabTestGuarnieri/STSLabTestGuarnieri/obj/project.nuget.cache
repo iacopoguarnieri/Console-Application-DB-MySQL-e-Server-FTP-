@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qdQDXNzbjRTypFXTRJ7VqQAnNjQvFkLfa0jDk+2KLDYTm+wmlldkhylxknnT+l9gmwEeFrZstnR/rY/cQihnkg==",
+  "dgSpecHash": "P21cERrwzZ2VSTgFqg1QZzJ6u39af0Jhh8nIwibNldNnsB4PNDI1rqnGenJ27s8a3/JkJ9Snlt3SVT0LfgJdPw==",
   "success": true,
-  "projectFilePath": "/Users/iacopoguarnieri/Projects/STSLabTestGuarnieri/STSLabTestGuarnieri/STSLabTestGuarnieri.csproj",
+  "projectFilePath": "/Users/iacopoguarnieri/Desktop/TestPerColloquio/STSLabTestGuarnieri/STSLabTestGuarnieri/STSLabTestGuarnieri.csproj",
   "expectedPackageFiles": [
     "/Users/iacopoguarnieri/.nuget/packages/bouncycastle.netcore/1.8.5/bouncycastle.netcore.1.8.5.nupkg.sha512",
     "/Users/iacopoguarnieri/.nuget/packages/google.protobuf/3.14.0/google.protobuf.3.14.0.nupkg.sha512",
